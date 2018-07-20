@@ -12,6 +12,7 @@ export class NegociacaoService {
             )
             .catch(err => console.log(err));
 
+            
     }
 }
 
