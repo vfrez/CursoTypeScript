@@ -1,0 +1,33 @@
+package.json
+{
+  "name": "alurabank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "tsc", /*Compila o TypeScript para o ES2015(es6)*/
+    "start": "tsc -w" /*compila e fica verificando alterações nos arquivos */ 
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  }
+}
+
+tsconfig.json
+{
+    "compilerOptions": {
+        "target": "es6",
+        "outDir": "app/js",
+        "noEmitOnError": true, /*Não gera o arquivo JS quando há erros */
+        "noImplicitAny": true, /*Não permite elementos sem tipagens */
+        "removeComments": true, /*Remove os comentarios dos arquivos JS gerados */
+        "strictNullChecks": true, /*Impede o boolean de receber valores alem de true e false*/
+        "experimentalDecorators": true /*Permite o uso de decoratos na TS, ja que o mesmo está em experimento no JS*/
+    },
+    "include": [
+        "app/ts/**/*"
+    ]
+}
